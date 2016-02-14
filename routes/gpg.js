@@ -15,7 +15,7 @@ router.post('/decrypt', function (req, res, next) {
 
 router.get('/keys', function (req, res, next) {
     "use strict";
-    res.send(gpginterface.getLocalKeysEmails());
+    res.send(gpginterface.getPrivateKeysIdentities());
 });
 
 

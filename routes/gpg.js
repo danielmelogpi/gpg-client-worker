@@ -18,5 +18,10 @@ router.get('/keys', function (req, res, next) {
     res.send(gpginterface.getPrivateKeysIdentities());
 });
 
+router.get('/public-keys', function (req, res, next) {
+    "use strict";
+    res.send(gpginterface.getKnownPubKeys());
+});
+
 
 module.exports = router;
